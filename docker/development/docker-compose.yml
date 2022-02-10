@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  nextjs:
+    build:
+      context: ../../
+      dockerfile: docker/development/Dockerfile
+    image: sugar-dating-fe-development
+    expose:
+      - '3000'
+  nginx:
+    build: ../../nginx
+    image: nginx-development
+    ports:
+      - '80:80'
