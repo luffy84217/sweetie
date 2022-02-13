@@ -6,10 +6,12 @@ services:
       context: ../../
       dockerfile: docker/development/Dockerfile
     image: sugar-dating-fe-development
-    expose:
-      - '3000'
+
   nginx:
-    build: ../../nginx
-    image: nginx-development
+    image: nginx:1.19.0-alpine
     ports:
-      - '80:80'
+      - 8000:8000
+    environment:
+      UPSTREAM_SERVER_URL: nextjs:3000
+    volumes:
+      - ../../nginx/nginx.conf:/etc/nginx/templates/nginx.conf.template
