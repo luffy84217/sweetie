@@ -1,7 +1,7 @@
 ---
 name: Task request
 about: A chore need to do for this project
-title: "[TASK] "
+title: "[Task] "
 labels: 'Priority: Medium'
 assignees: ''
 
