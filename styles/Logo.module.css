@@ -1,0 +1,27 @@
+.fire-left-origin {
+  fill: url(#g1)
+} 
+
+.fire-right-origin {
+  fill: url(#g2)
+} 
+
+.heart-origin {
+  fill: url(#g3)
+}
+
+.fire-left-black, .fire-right-black, .heart-black {
+  fill: black
+}
+
+.fire-left-white, .fire-right-white, .heart-white {
+  fill: white
+}
+
+.black-text {
+  fill: black
+}
+
+.white-text {
+  fill: white
+}
