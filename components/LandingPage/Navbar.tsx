@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useRef, useState } from 'react';
+import { FC, Fragment, MouseEventHandler, useEffect, useRef, useState } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { GlobeIcon } from '@heroicons/react/solid';
 import { MenuIcon, ChevronDownIcon, XIcon, ChevronUpIcon } from '@heroicons/react/outline';
@@ -6,10 +6,18 @@ import { navigation } from '../../config/landingPage';
 import useScroll from '../../hooks/useScroll';
 import { LogoIcon, LogoText } from '../Logo';
 
-const Navbar: FC = () => {
+interface NavBarProps {
+  onSignUpClick?: () => void;
+}
+
+const Navbar: FC<NavBarProps> = (props) => {
   const navEl = useRef<HTMLDivElement>(null);
   const [isColored, setIsColored] = useState(false);
   const scrollY = useScroll();
+
+  const handleSignUpClick: MouseEventHandler<HTMLAnchorElement> = () => {
+    props.onSignUpClick?.();
+  };
 
   useEffect(() => {
     const navHeight = navEl.current?.offsetHeight;
@@ -102,6 +110,7 @@ const Navbar: FC = () => {
           <a
             href="#"
             className="whitespace-nowrap inline-flex items-center justify-center bg-white hover:bg-gray-100 px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-pink-400 hover:text-pink-500 transition-colors"
+            onClick={handleSignUpClick}
           >
             Sign in
           </a>
@@ -151,7 +160,7 @@ const Navbar: FC = () => {
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer? 
-                  <a href="#" className=" text-black">
+                  <a href="#" className=" text-black" onClick={handleSignUpClick}>
                     Sign in
                   </a>
                 </p>
