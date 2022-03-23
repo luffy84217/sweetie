@@ -28,7 +28,7 @@ const Navbar: FC<NavBarProps> = (props) => {
   }, [scrollY])
 
   return (
-    <Popover as="nav" className={`relative bg-${isColored ? 'pink-400' : 'transparent'} transition-colors shadow-inner`}>
+    <Popover as="nav" className={`relative bg-${isColored ? 'pink-400' : 'transparent'} transition-colors ${isColored ? 'shadow shadow-inner' : ''}`}>
       {/* desktop device */}
       <div ref={navEl} className="flex justify-between items-center max-w-7xl mx-auto px-4 py-3 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
         <a href="#" className="flex items-center justify-start lg:w-0 lg:flex-1">
