@@ -14,6 +14,8 @@ module.exports = {
         accent: '#ec4899',
         'accent-dark': '#a855f7',
         // Custom Color Scheme
+        focus: '#0072e5',
+        'focus-dark': '#66b2ff',
         danger: '#ff4444',
         'danger-dark': '#cc0000',
         warning: '#ffbb33',
@@ -30,5 +32,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }
