@@ -1,13 +1,4 @@
-interface TextFieldProps {
-  type?: string;
-  label?: string | React.ReactNode;
-  labelHint?: string | React.ReactNode;
-  htmlFor?: string;
-  addon?: string | React.ReactNode;
-  startEnhancer?: string | React.ReactNode;
-  endEnhancer?: string | React.ReactNode;
-  invalidMessage?: string | React.ReactNode;
-}
+import type { TextFieldProps } from "../../types/TextField";
 
 const TextField: React.FC<TextFieldProps & React.HTMLAttributes<HTMLInputElement>> = ({
   type,
@@ -25,7 +16,7 @@ const TextField: React.FC<TextFieldProps & React.HTMLAttributes<HTMLInputElement
   const invalid = 'border-danger text-red-900 placeholder-red-300 focus:outline-none focus:ring-danger focus:border-danger';
 
   return (
-    <div>
+    <div className="w-full">
       <div className="flex justify-between">
         <label htmlFor={htmlFor} className="block text-sm font-medium text-gray-700">
           {label}
