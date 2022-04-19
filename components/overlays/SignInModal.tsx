@@ -1,7 +1,7 @@
 import { LogoIcon } from '../Logo';
 import Modal, { ModalProps } from '../Modal'
 
-const SignUpModal: React.FC<Omit<ModalProps, 'titleAboveModal'>> = (props) => {
+const SignInModal: React.FC<Omit<ModalProps, 'titleAboveModal'>> = (props) => {
   const title = (
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
       <LogoIcon className="mx-auto h-12 w-auto" />
@@ -130,4 +130,4 @@ const SignUpModal: React.FC<Omit<ModalProps, 'titleAboveModal'>> = (props) => {
   )
 };
 
-export default SignUpModal;
+export default SignInModal;

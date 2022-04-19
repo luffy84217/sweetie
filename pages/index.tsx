@@ -4,7 +4,7 @@ import CTASection from '../components/LandingPage/CTASection';
 import FeatureSection from '../components/LandingPage/FeatureSection';
 import HeroSection from '../components/LandingPage/HeroSection';
 import Navbar from '../components/LandingPage/Navbar';
-import SignUpModal from '../components/LandingPage/SignUpModal';
+import SignUpModal from '../components/overlays/SignInModal';
 import Layout from '../components/Layout';
 
 const IndexPage: NextPage = () => {
