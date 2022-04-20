@@ -25,7 +25,7 @@ const HeroSection: FC = () => {
         >
           <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
             <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="block xl:inline">Let's start finding your</span>
+              <span className="block xl:inline">Let&#39;s start finding your</span>
               {/* space */}
               <span className="block text-pink-400 xl:inline">relationship</span>
             </h1>
